@@ -5,24 +5,10 @@ import Layout from "@/components/layout/Layout";
 import GameContainer from "@/components/games/GameContainer";
 import GameResult from "@/components/games/GameResult";
 import { GameType } from "@/types/game";
-import ColorChangeGame from "@/games/ColorChangeGame";
-import CatchBallGame from "@/games/CatchBallGame";
-import FindNumberGame from "@/games/FindNumberGame";
-import FindColorGame from "@/games/FindColorGame";
-import ColorTextGame from "@/games/ColorTextGame";
 import ColorCatchGame from "@/games/ColorCatchGame";
-import ReflexTapGame from "@/games/ReflexTapGame";
-import PatternMemoryGame from "@/games/PatternMemoryGame";
 
 const STANDARD_BEST_AVERAGE_TIMINGS: Record<string, number> = {
-  colorChange: 0.20,      // 0.20s world average for "Color Change"
-  catchBall: 0.18,        // 0.18s for "Catch the Ball"
-  findNumber: 4.00,       // 4s standard average for grid
-  findColor: 3.50,        // 3.5s for colors
-  colorText: 4.00,        // 4s for color text
   colorCatch: 27.00,      // 27s for color catch
-  reflexTap: 5.00,        // 5s (total for whole game or for all taps)
-  patternMemory: 2.50,    // 2.5s per pattern
 };
 
 const GamePage: React.FC = () => {
@@ -71,22 +57,8 @@ const GamePage: React.FC = () => {
 
   const renderGame = () => {
     switch (game.id) {
-      case "colorChange":
-        return <ColorChangeGame onFinish={handleGameEnd} />;
-      case "catchBall":
-        return <CatchBallGame onFinish={handleGameEnd} />;
-      case "findNumber":
-        return <FindNumberGame onFinish={handleGameEnd} />;
-      case "findColor":
-        return <FindColorGame onFinish={handleGameEnd} />;
-      case "colorText":
-        return <ColorTextGame onFinish={handleGameEnd} />;
       case "colorCatch":
         return <ColorCatchGame onFinish={handleGameEnd} />;
-      case "reflexTap":
-        return <ReflexTapGame onFinish={handleGameEnd} />;
-      case "patternMemory":
-        return <PatternMemoryGame onFinish={handleGameEnd} />;
       default:
         return <div>Game component not available</div>;
     }
