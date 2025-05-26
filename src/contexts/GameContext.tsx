@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { GameType, GameResult, Game } from "@/types/game";
 
@@ -18,60 +17,11 @@ const GameContext = createContext<GameContextProps | undefined>(undefined);
 
 const GAMES: Game[] = [
   {
-    id: "colorChange",
-    name: "Color Change",
-    description: "Tap when the color changes",
-    instructions: "Watch the screen carefully and tap as soon as the color changes.",
-    icon: "⬛️⬜️",
-  },
-  {
-    id: "catchBall",
-    name: "Catch the Ball",
-    description: "Tap to catch a falling ball",
-    instructions: "Tap the ball as it falls before it reaches the bottom of the screen.",
-    icon: "⚪️",
-  },
-  {
-    id: "findNumber",
-    name: "Find the Number",
-    description: "Tap the correct number in the grid",
-    instructions: "Quickly find and tap the specified number among the grid of numbers.",
-    icon: "🔢",
-  },
-  {
-    id: "findColor",
-    name: "Find the Color",
-    description: "Tap the word shown in the correct color",
-    instructions: "Tap the word that matches the color shown at the top of the screen.",
-    icon: "🔍",
-  },
-  {
-    id: "colorText",
-    name: "Color Text",
-    description: "Tap the word describing the text color",
-    instructions: "Tap the word that describes the color of the text, not the word itself.",
-    icon: "🎨",
-  },
-  {
     id: "colorCatch",
     name: "Color Catch",
     description: "Tap circles of a specific color",
     instructions: "Tap only the circles of the specified color as they appear.",
     icon: "⭕️",
-  },
-  {
-    id: "reflexTap",
-    name: "Reflex Tap",
-    description: "Tap as quickly as possible",
-    instructions: "Tap as quickly as possible when a shape appears on screen.",
-    icon: "⚡️",
-  },
-  {
-    id: "patternMemory",
-    name: "Pattern Memory",
-    description: "Repeat the shown sequence",
-    instructions: "Watch the sequence of colors or numbers, then repeat it in the same order.",
-    icon: "📋",
   },
 ];
 
